@@ -1,4 +1,5 @@
 import imgDots from "../images/icon-ellipsis.svg";
+import imgDotsWhite from "../images/icon-ellipsis-white.svg";
 import "../scss/_variables.scss";
 
 const StatsCard = (props) => {
@@ -17,13 +18,15 @@ const StatsCard = (props) => {
         <span className="data__numbers big">
           {props.timeframes.weekly.current}hrs
         </span>
-        <div className="data__more">
-          <img src={imgDots} alt="" />
-        </div>
+
         <span className="data__last-period">
           Last Week - {props.timeframes.weekly.previous}hrs
         </span>
         {/* Uwzglednic zmiany daily/weekly/montly */}
+      </div>
+      <div className="data__more">
+        <img className="data__more--normal" src={imgDots} alt="dots" />
+        <img className="data__more--white" src={imgDotsWhite} alt="dots" />
       </div>
     </div>
   );

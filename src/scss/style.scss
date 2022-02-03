@@ -17,9 +17,19 @@
 }
 
 .grid-container {
+  min-height: 100vh;
+  padding: 80px 0;
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 22px;
+
+  @media (min-width: $desktop-sm) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    row-gap: 30px;
+    column-gap: 30px;
+    padding: 12% 10%;
+  }
 }
 
 .card {
@@ -29,11 +39,27 @@
   border-radius: $border-radius;
   background-color: $dark-blue;
   color: white;
+
+  @media (min-width: $mobile-md) {
+    width: 80%;
+  }
+
+  @media (min-width: $mobile-lg) {
+    width: 70%;
+  }
+
+  @media (min-width: $desktop-sm) {
+    width: 100%;
+  }
 }
 
 .big {
   font-size: 3.3rem;
   font-weight: 300;
+
+  @media (min-width: $desktop-sm) {
+    font-size: 5rem;
+  }
 }
 
 .active {
@@ -41,6 +67,10 @@
 }
 
 .attribution {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   padding: 15px 0;
   font-size: 11px;
   text-align: center;
