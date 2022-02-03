@@ -1,0 +1,77 @@
+@import "normalize";
+@import "variables";
+
+.stats {
+  &__bar {
+    border-radius: $border-radius;
+    height: 60px;
+    width: 100%;
+    overflow: hidden;
+    background-size: 80px auto;
+    background-repeat: no-repeat;
+    background-position: 94% 30%;
+  }
+
+  &__data {
+    height: 120px;
+    width: 100%;
+    margin-top: -20px;
+    border-radius: $border-radius;
+    background-color: $dark-blue;
+  }
+}
+
+.data {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  align-items: center;
+  padding: 8%;
+
+  &__title {
+    grid-area: 1/1;
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+
+  &__numbers {
+    grid-area: 2/1;
+  }
+
+  &__more {
+    grid-area: 1/2;
+    justify-self: end;
+  }
+
+  &__last-period {
+    grid-area: 2/2;
+    justify-self: end;
+    color: $pale-blue;
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+}
+
+#work {
+  background-color: $work;
+}
+
+#play {
+  background-color: $play;
+}
+
+#study {
+  background-color: $study;
+}
+
+#exercise {
+  background-color: $exercise;
+}
+
+#social {
+  background-color: $social;
+}
+
+#self-care {
+  background-color: $self-care;
+}

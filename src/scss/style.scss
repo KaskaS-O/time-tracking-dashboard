@@ -1,7 +1,9 @@
 @import "normalize";
 @import "variables";
+@import "UserCard";
+@import "StatsCard";
 
-.title {
+.main-title {
   font-size: 0;
   width: 1px;
   height: 1px;
@@ -14,10 +16,36 @@
   clip: rect(1px, 1px, 1px, 1px);
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 22px;
+}
+
+.card {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: $border-radius;
+  background-color: $dark-blue;
+  color: white;
+}
+
+.big {
+  font-size: 3.3rem;
+  font-weight: 300;
+}
+
+.active {
+  color: white;
+}
+
 .attribution {
+  padding: 15px 0;
   font-size: 11px;
   text-align: center;
+  color: $desaturated-blue;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: $pale-blue;
 }
