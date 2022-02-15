@@ -1,4 +1,15 @@
+import StatsSelect from "./StatsSelect";
+
 const UserCard = (props) => {
+  const menu = props.statsPeriods.map((item) => (
+    <StatsSelect
+      key={item.title}
+      txt={item.txt}
+      id={item.title}
+      click={props.click}
+    />
+  ));
+
   return (
     <div className="card intro">
       <div className="intro__user-panel user">
@@ -10,17 +21,7 @@ const UserCard = (props) => {
           {props.name} {props.surname}
         </span>
       </div>
-      <div className="intro__menu menu">
-        <span className="menu__stats" id="day">
-          Daily
-        </span>
-        <span className="menu__stats" id="week">
-          Weekly
-        </span>
-        <span className="menu__stats" id="month">
-          Monthly
-        </span>
-      </div>
+      <div className="intro__menu menu">{menu}</div>
     </div>
   );
 };

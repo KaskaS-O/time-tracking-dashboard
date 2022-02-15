@@ -8,6 +8,20 @@ class App extends Component {
     surname: "",
     img: "",
     stats: [],
+    activeStatsPeriod: "week",
+  };
+
+  statsPeriods = [
+    { title: "day", txt: "Daily" },
+    { title: "week", txt: "Weekly" },
+    { title: "month", txt: "Monthly" },
+  ];
+
+  handleStatsSelect = (event) => {
+    const id = event.target.id;
+    this.setState({
+      activeStatsPeriod: id,
+    });
   };
 
   componentDidMount() {
@@ -24,18 +38,25 @@ class App extends Component {
   }
 
   render() {
-    const { name, surname, img } = this.state;
+    const { name, surname, img, activeStatsPeriod } = this.state;
     const stats = this.state.stats.map((item) => (
       <StatsCard
         key={item.title}
         title={item.title}
         icon={item.icon}
         timeframes={item.timeframes}
+        activeStatsPeriod={activeStatsPeriod}
       />
     ));
     return (
       <>
-        <UserCard name={name} surname={surname} img={img} />
+        <UserCard
+          name={name}
+          surname={surname}
+          img={img}
+          statsPeriods={this.statsPeriods}
+          click={this.handleStatsSelect}
+        />
         {stats}
       </>
     );
