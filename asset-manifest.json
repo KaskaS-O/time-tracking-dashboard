@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/time-tracking-dashboard/static/css/main.569a0459.css",
+    "main.js": "/time-tracking-dashboard/static/js/main.1cadd48a.js",
+    "index.html": "/time-tracking-dashboard/index.html",
+    "static/media/icon-ellipsis-white.svg": "/time-tracking-dashboard/static/media/icon-ellipsis-white.07e0076cf8af51f1008431120c1656dd.svg",
+    "static/media/icon-ellipsis.svg": "/time-tracking-dashboard/static/media/icon-ellipsis.a57a4ac863593bb69d31b4399823f745.svg",
+    "main.569a0459.css.map": "/time-tracking-dashboard/static/css/main.569a0459.css.map",
+    "main.1cadd48a.js.map": "/time-tracking-dashboard/static/js/main.1cadd48a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.569a0459.css",
+    "static/js/main.1cadd48a.js"
+  ]
+}
