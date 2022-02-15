@@ -19,6 +19,7 @@ class App extends Component {
 
   handleStatsSelect = (event) => {
     const id = event.target.id;
+
     this.setState({
       activeStatsPeriod: id,
     });
@@ -55,6 +56,7 @@ class App extends Component {
           surname={surname}
           img={img}
           statsPeriods={this.statsPeriods}
+          activeStatsPeriod={activeStatsPeriod}
           click={this.handleStatsSelect}
         />
         {stats}

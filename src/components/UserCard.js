@@ -7,6 +7,7 @@ const UserCard = (props) => {
       txt={item.txt}
       id={item.title}
       click={props.click}
+      active={item.title === props.activeStatsPeriod ? true : false}
     />
   ));
 
